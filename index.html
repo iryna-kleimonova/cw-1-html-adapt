@@ -115,6 +115,10 @@
             <li class="taste-item">
               <div class="taste-cover-wrap">
                 <img
+                  srcset="
+                    ./images/taste-img-1.png    1x,
+                    ./images/taste-img-1-2x.png 2x
+                  "
                   class="taste-image"
                   src="/images/taste-img-1.png"
                   alt="mILK CHOCOLATE"
@@ -169,13 +173,35 @@
         <div class="container">
           <h2 class="made-title section-title">hOW IT’S <span>made?</span></h2>
           <div class="made-container">
-            <img
-              class="made-image"
-              src="/images/taste-img-5.jpg"
-              alt="Liquid chocolate"
-              width="600"
-              height="400"
-            />
+            <picture>
+              <source
+                media="(min-width: 1166px)"
+                srcset="
+                  ./images/made-img-1x.jpg 1x,
+                  ./images/made-img-2x.jpg 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  ./images/made-tab-img-1x.jpg 1x,
+                  ./images/made-tab-img-2x.jpg 2x
+                "
+              />
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  ./images/made-mob-img-1x.jpg 1x,
+                  ./images/made-mob-img-2x.jpg 2x
+                "
+              />
+              <img
+                class="made-image"
+                src="/images/made-tab-img-1x.jpg"
+                alt="Liquid chocolate"
+                width="614"
+              />
+            </picture>
             <div class="made-content">
               <h3 class="made-subtitle">
                 Try our chocolates today and discover the perfect balance of
